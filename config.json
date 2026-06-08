@@ -1,0 +1,8 @@
+{
+    "screen_width": 1920,
+    "screen_height": 1080,
+    "jumpscare_folder": "jumpscares",
+    "min_wait_seconds": 60,
+    "max_wait_seconds": 600,
+    "stop_global_hotkey": "ctrl+shift+q"
+}
