@@ -21,8 +21,8 @@ with open("config.json", "r") as config_file:
 # Auto set screen height and width if not set
 pygame.init()
 
-SCREEN_WIDTH = pygame.display.Info().current_w if config["screen_width"] is 0 else config["screen_width"]
-SCREEN_HEIGHT = pygame.display.Info().current_h if config["screen_height"] is 0 else config["screen_height"]
+SCREEN_WIDTH = pygame.display.Info().current_w if config["screen_width"] == 0 else config["screen_width"]
+SCREEN_HEIGHT = pygame.display.Info().current_h if config["screen_height"] == 0 else config["screen_height"]
 print(SCREEN_WIDTH, SCREEN_HEIGHT) 
 
 JUMPSCARE_FOLDER = config["jumpscare_folder"]
@@ -114,6 +114,3 @@ jumpscare = Jumpscare()
 
 while True:
     jumpscare.trigger_random_jumpscare()
-
-    width, height = pygame.display.Info().current_w, pygame.display.Info().current_h
-    print(width, height)
