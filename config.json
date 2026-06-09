@@ -1,6 +1,6 @@
 {
-    "screen_width": 1920,
-    "screen_height": 1080,
+    "screen_width": 0,
+    "screen_height": 0,
     "jumpscare_folder": "jumpscares",
     "min_wait_seconds": 60,
     "max_wait_seconds": 600,

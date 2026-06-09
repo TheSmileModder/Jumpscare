@@ -17,12 +17,19 @@ def stop_program():
 with open("config.json", "r") as config_file:
     config = json.load(config_file)
 
-SCREEN_WIDTH = config["screen_width"]
-SCREEN_HEIGHT = config["screen_height"]
+
+# Auto set screen height and width if not set
+pygame.init()
+
+SCREEN_WIDTH = pygame.display.Info().current_w if config["screen_width"] is 0 else config["screen_width"]
+SCREEN_HEIGHT = pygame.display.Info().current_h if config["screen_height"] is 0 else config["screen_height"]
+print(SCREEN_WIDTH, SCREEN_HEIGHT) 
+
 JUMPSCARE_FOLDER = config["jumpscare_folder"]
 MIN_WAIT_SECONDS = config["min_wait_seconds"]
 MAX_WAIT_SECONDS = config["max_wait_seconds"]
 STOP_HOTKEY = config["stop_global_hotkey"]
+
 
 clock = pygame.time.Clock()
 direname = os.path.dirname(__file__)
@@ -104,5 +111,9 @@ class Jumpscare:
 jumpscare = Jumpscare()
 
 
+
 while True:
     jumpscare.trigger_random_jumpscare()
+
+    width, height = pygame.display.Info().current_w, pygame.display.Info().current_h
+    print(width, height)

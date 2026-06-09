@@ -39,8 +39,8 @@ Edit `config.json` to change the settings:
 
 ```
 {
-    "screen_width": 1920,
-    "screen_height": 1080,
+    "screen_width": 0,
+    "screen_height": 0,
     "jumpscare_folder": "jumpscares",
     "min_wait_seconds": 60,
     "max_wait_seconds": 600,
@@ -51,7 +51,7 @@ Edit `config.json` to change the settings:
 
 | Settings | What it does |
 | ---- | ---- |
-| `screen_width`/`screen_height` | Resolution of your monitor |       
+| `screen_width`/`screen_height` | Resolution of your monitor ***(if one is 0 it tries to get your resulution)*** |
 | `jumpscare_folder` | Path to the folder containing your Jumpscares | 
 | `min_wait_seconds` | Minimum time between jumpscares |
 | `max_wait_seconds` | Maximum time between jumpscares |
